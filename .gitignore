@@ -1,0 +1,14 @@
+# System Files
+.cache
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.sublime-project
+*.sublime-workspace
+.vscode/
+*.code-workspace
+
+# do not commit the generated files
+completions/_fnm
