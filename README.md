@@ -1,5 +1,5 @@
 # zsh-mise
-A zsh plugin for `mise` (formerly called `rtx`) a fast polyglot version manager. A replacement for tools like nvm, nodenv, rbenv, rvm, chruby, pyenv, etc.
+A zsh plugin for `mise` (formerly called `rtx`) a fast polyglot version manager, replacing tools like nvm, nodenv, rbenv, rvm, chruby, pyenv, etc.
 
 ## Prerequisite Checks
 A check will be performed to verify that `mise` has been installed:
