@@ -16,11 +16,17 @@ eval "$(mise env)"
 # Completions directory for `mise` command
 local COMPLETIONS_DIR="${0:A:h}/completions"
 
-# Only regenerate completions if older than 7 days, or does not exist
-if [[ ! -f "$COMPLETIONS_DIR/_mise"  ||  ! $(find "$COMPLETIONS_DIR/_mise" -newermt "7 days ago" -print) ]]; then
-    mise completions zsh >| "$COMPLETIONS_DIR/_mise"
-fi
-
 # Add completions to the FPATH
 typeset -TUx FPATH fpath
 fpath=("$COMPLETIONS_DIR" $fpath)
+
+# If the completion file does not exist yet, then we need to autoload
+# and bind it to `mise`. Otherwise, compinit will have already done that.
+if [[ ! -f "$COMPLETIONS_DIR/_mise" ]]; then
+    typeset -g -A _comps
+    autoload -Uz _mise
+    _comps[mise]=_mise
+fi
+
+# Generate and load completion in the background
+mise completions zsh >| "$COMPLETIONS_DIR/_mise" &|
