@@ -11,4 +11,4 @@ Thumbs.db
 *.code-workspace
 
 # do not commit the generated files
-completions/_fnm
+completions/_mise
