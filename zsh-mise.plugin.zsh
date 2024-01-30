@@ -10,9 +10,6 @@ fi
 # Add 'mise' hooks to the zsh shell
 eval "$(mise activate zsh)"
 
-# Update the environment here to ensure immediately available
-eval "$(mise env)"
-
 # Completions directory for `mise` command
 local COMPLETIONS_DIR="${0:A:h}/completions"
 
