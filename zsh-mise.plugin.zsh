@@ -7,11 +7,11 @@ if ! (( $+commands[mise] )); then
     return
 fi
 
-# Add 'mise' hooks to the zsh shell
+# Activate `mise` within the zsh shell and provide access to any
+# globally insstalled tools within your `.zshrc` file.
+# https://mise.jdx.dev/dev-tools/shims.html#zshrc-bashrc-files
 eval "$(mise activate zsh)"
-
-# Update the environment here to ensure immediately available
-eval "$(mise env)"
+eval "$(mise hook-env -s zsh)"
 
 # Completions directory for `mise` command
 local COMPLETIONS_DIR="${0:A:h}/completions"
