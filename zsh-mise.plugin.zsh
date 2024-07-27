@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 # shellcheck disable=SC1090
 
-# Exit if the 'mise' command can not be found
-if ! (( $+commands[mise] )); then
-    echo "WARNING: 'mise' command not found"
+# Exit if the 'mise' or 'usage' commands can not be found
+if ! (( $+commands[mise] && $+commands[usage] )); then
+    echo "WARNING: 'mise' or 'usage' commands not found"
     return
 fi
 
