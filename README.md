@@ -17,7 +17,7 @@ First we need to [download and install `mise`](https://mise.jdx.dev/getting-star
 curl https://mise.jdx.dev/install.sh | sh
 ```
 
-Next we need to install the [`usage`](https://usage.jdx.dev/) which is required by `mise` to generate the zsh completions. This can be done by running the following::
+Next we need to install [`usage`](https://usage.jdx.dev/) which is required by `mise` to generate the zsh completions. This can be done by running the following:
 
 ```sh
 mise use --global usage@latest
