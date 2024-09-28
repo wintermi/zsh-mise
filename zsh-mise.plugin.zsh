@@ -3,15 +3,14 @@
 
 # Exit if the 'mise' command can not be found
 if ! (( $+commands[mise] )); then
-    echo "WARNING: 'mise' command not found"
     return
 fi
 
 # Activate `mise` within the zsh shell and provide access to any
 # globally insstalled tools within your `.zshrc` file.
 # https://mise.jdx.dev/dev-tools/shims.html#zshrc-bashrc-files
-eval "$(mise activate zsh)"
-eval "$(mise hook-env -s zsh)"
+source <(mise activate zsh)
+source <(mise hook-env -s zsh)
 
 # Completions directory for `mise` command
 local COMPLETIONS_DIR="${0:A:h}/completions"
