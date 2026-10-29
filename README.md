@@ -23,7 +23,7 @@ Next we need to install [`usage`](https://usage.jdx.dev/) which is required by `
 mise use --global usage@latest
 ```
 
-Finally we need to enable `mise` using the [:zap: Zap](https://www.zapzsh.org/) minimal zsh plugin manager, by adding the following to your `.zshrc`
+Finally we need to enable `mise` using the [:zap: Zap](https://www.zapzsh.com/) minimal zsh plugin manager, by adding the following to your `.zshrc`
 
 ```sh
 # Install plugin
